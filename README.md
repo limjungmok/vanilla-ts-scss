@@ -1,10 +1,13 @@
-# Vanilla-TS-Scss boilerplate
+# Vanilla-TS-Scss Carousel
+> Sample : https://limjungmok.github.io/vanilla-ts-scss/
 
 - Webpack5, TS, Scss, Jest
-- `npm i`
-- `npm run build`
-- `npm test`
-- Structure
+- `yarn i`
+- `yarn build`
+- `yarn test`
+- `yarn deploy`
+
+## Main Concept
 ![uml](./src/assets/public/uml.jpeg)
 
 ## Spec
