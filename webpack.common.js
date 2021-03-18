@@ -15,12 +15,12 @@ module.exports = {
   },
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
       {
-        test: /\.test?$/,
+        test: /\.ts?$/,
         exclude: /node_modules/,
         use: {
           loader: 'ts-loader',
@@ -39,6 +39,12 @@ module.exports = {
             options: { sourceMap: true }
           }
         ]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        use: {
+          loader: 'file-loader'
+        }
       }
     ]
   },
@@ -58,9 +64,9 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: 'src/assets', to: 'assets' }]
     }),
-    new ESLintPlugin({
-      extensions: ['.tsx', '.ts', '.js'],
-      exclude: 'node_modules'
-   })
+  //   new ESLintPlugin({
+  //     extensions: ['.tsx', '.ts', '.js'],
+  //     exclude: 'node_modules'
+  //  })
  ], 
 };
